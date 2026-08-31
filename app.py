@@ -41,7 +41,9 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         results = get_results()
-
+total_services = len(results)
+healthy_services = sum(1 for _, status, _ in results if status == "HEALTHY")
+down_services = sum(1 for _, status, _ in results if status == "DOWN")
         html = """
         <html>
         <head>
@@ -156,11 +158,34 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
 </style>
         </head>
 
-        <body>
-            <h1>Cloud Health Monitor</h1>
-            <p>Last checked: %s</p>
-            <button onclick="location.reload()">Refresh Now</button>
-        """ % datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+       <body>
+<div class="container">
+
+    <h1>☁️ Cloud Health Monitor</h1>
+
+    <p class="subtitle">Real-time cloud service health monitoring</p>
+
+    <p class="last-check">Last checked: %s</p>
+
+    <button onclick="location.reload()">↻ Refresh Now</button>
+
+    <div class="overview">
+        <div class="stat">
+            <div class="stat-label">Services Monitored</div>
+            <div class="stat-value">%d</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-label">Healthy</div>
+            <div class="stat-value">%d</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-label">Down</div>
+            <div class="stat-value">%d</div>
+        </div>
+    </div>
+       """ % (total_services, healthy_services, down_services, datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
         for name, status, response_time in results:
 
