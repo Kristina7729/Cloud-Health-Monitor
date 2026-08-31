@@ -58,3 +58,7 @@ Cloud-Health-Monitor/
 ├── README.md
 ├── .gitignore
 └── .env
+
+## 📊 Example Results
+
+![Cloud Health Monitor Results](Screenshot%202026-08-31%20152100.png)
