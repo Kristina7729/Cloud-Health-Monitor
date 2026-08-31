@@ -41,9 +41,9 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         results = get_results()
-total_services = len(results)
-healthy_services = sum(1 for _, status, _ in results if status == "HEALTHY")
-down_services = sum(1 for _, status, _ in results if status == "DOWN")
+        total_services = len(results)
+        healthy_services = sum(1 for _, status, _ in results if status == "HEALTHY")
+        down_services = sum(1 for _, status, _ in results if status == "DOWN")
         html = """
         <html>
         <head>
