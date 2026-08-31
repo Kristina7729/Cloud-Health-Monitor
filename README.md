@@ -1,32 +1,36 @@
-# Cloud Service Health Monitor
+# ☁️ Cloud Health Monitor
 
-A Python-based monitoring tool that checks the availability of cloud services and reports their health status and response time.
+A lightweight Python application that monitors the health and response time of major cloud and technology services.
 
-## Features
+## 🚀 What It Does
 
-- Checks multiple services using HTTP requests
-- Reports services as HEALTHY or DOWN
-- Measures response time
-- Handles connection/request errors
-- Uses a configurable service list
+The Cloud Health Monitor checks whether selected services are reachable and reports:
 
-## Technologies
+- Service status (HEALTHY / DOWN)
+- Response time
+- Multiple services in one run
 
-- Python
-- Requests
-- HTTP/HTTPS
-- VS Code
-
-## Services Monitored
+Currently monitored services:
 
 - Google
 - GitHub
 - Amazon
 
-## Example Output
+## 🛠️ Technologies Used
 
-Google : HEALTHY
-GitHub : HEALTHY
-Amazon : DOWN
+- Python
+- Requests
+- Git & GitHub
+- Environment Variables
+- Virtual Environment (venv)
 
-Response time: 0.54 seconds
+## 📂 Project Structure
+
+```text
+cloud-health-monitor/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── .env
