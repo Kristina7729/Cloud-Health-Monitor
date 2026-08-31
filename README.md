@@ -40,6 +40,14 @@ Cloud Health Monitor checks whether selected services are reachable and reports:
 4. Results are displayed through a web dashboard.
 5. The dashboard can be refreshed to perform another health check.
 
+6. ## 📊 Example Results
+
+Google — HEALTHY  
+GitHub — HEALTHY  
+Amazon — DOWN  
+
+Each check also displays the response time for the monitored service.
+
 ## 📂 Project Structure
 
 ```text
