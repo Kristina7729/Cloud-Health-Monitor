@@ -47,35 +47,113 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
         <head>
             <title>Cloud Health Monitor</title>
             <meta http-equiv="refresh" content="30">
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 40px;
-                    background: #f5f7fa;
-                }
+           <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: linear-gradient(135deg, #f8f5ff, #fff7fb);
+        color: #27233a;
+    }
 
-                h1 {
-                    color: #222;
-                }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
 
-                .service {
-                    background: white;
-                    padding: 20px;
-                    margin: 15px 0;
-                    border-radius: 10px;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                }
+    h1 {
+        font-size: 38px;
+        margin-bottom: 8px;
+        color: #30264d;
+    }
 
-                .healthy {
-                    color: green;
-                    font-weight: bold;
-                }
+    .subtitle {
+        color: #77718a;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
 
-                .down {
-                    color: red;
-                    font-weight: bold;
-                }
-            </style>
+    .overview {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .stat {
+        background: white;
+        padding: 22px;
+        border-radius: 18px;
+        box-shadow: 0 8px 25px rgba(80, 60, 120, 0.08);
+    }
+
+    .stat-label {
+        font-size: 14px;
+        color: #817a91;
+        margin-bottom: 8px;
+    }
+
+    .stat-value {
+        font-size: 28px;
+        font-weight: bold;
+        color: #49366d;
+    }
+
+    .service {
+        background: white;
+        padding: 25px;
+        margin: 16px 0;
+        border-radius: 18px;
+        box-shadow: 0 8px 25px rgba(80, 60, 120, 0.08);
+        border: 1px solid #eee9f5;
+    }
+
+    .service h2 {
+        margin-top: 0;
+        color: #30264d;
+    }
+
+    .healthy {
+        color: #24945a;
+        font-weight: bold;
+        background: #eaf8f0;
+        padding: 6px 12px;
+        border-radius: 20px;
+        display: inline-block;
+    }
+
+    .down {
+        color: #d94b68;
+        font-weight: bold;
+        background: #fff0f3;
+        padding: 6px 12px;
+        border-radius: 20px;
+        display: inline-block;
+    }
+
+    button {
+        background: #7654a6;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 15px rgba(118, 84, 166, 0.25);
+    }
+
+    button:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    .last-check {
+        color: #817a91;
+        margin-bottom: 15px;
+    }
+</style>
         </head>
 
         <body>
