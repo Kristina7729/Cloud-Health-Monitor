@@ -81,6 +81,7 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
         <body>
             <h1>Cloud Health Monitor</h1>
             <p>Last checked: %s</p>
+            <button onclick="location.reload()">Refresh Now</button>
         """ % datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         for name, status, response_time in results:
