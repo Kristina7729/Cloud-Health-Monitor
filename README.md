@@ -57,12 +57,12 @@ Cloud-Health-Monitor/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-└── .env ```
+└── .env ```.
 
 ## 📊 Dashboard Preview
 
 The dashboard provides a real-time overview of service health, response times, and availability across monitored cloud services.
 
-![Cloud Health Monitor Dashboard - Part 1](./dashboard-part1.png)
+![Cloud Health Monitor Dashboard - Part 1](./dashboard-part1)
 
-![Cloud Health Monitor Dashboard - Part 2](./dashboard-part2.png)
+![Cloud Health Monitor Dashboard - Part 2](./dashboard-part2)
