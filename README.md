@@ -59,6 +59,10 @@ Cloud-Health-Monitor/
 ├── .gitignore
 └── .env
 
-## 📊 Example Results
+## 📊 Dashboard Preview
 
-![Cloud Health Monitor Results](Screenshot%202026-08-31%20152100.png)
+The dashboard provides a real-time overview of service health, response times, and availability across monitored cloud services.
+
+![Cloud Health Monitor Dashboard - Part 1](Dashboard.png)
+
+![Cloud Health Monitor Dashboard - Part 2](Dashboard1.png)
