@@ -15,16 +15,29 @@ def check_health(url):
     start_time = time.time()
 
     try:
-        response = requests.get(url, timeout=5)
+        response = requests.get(
+            url,
+            timeout=5,
+            allow_redirects=True,
+            headers={"User-Agent": "Mozilla/5.0"}
+        )
+
         response_time = time.time() - start_time
 
-        if response.status_code == 200:
+        print(f"{url} -> HTTP {response.status_code} -> {response.url}")
+
+        if 200 <= response.status_code < 400:
             return "HEALTHY", response_time
         else:
             return "DOWN", response_time
 
     except requests.RequestException:
         return "DOWN", None
+
+print("\n=== CLOUD SERVICE HEALTH MONITOR ===")
+print("Check time:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+print("------------------------------------") 
+print()
 
 
 def get_results():
