@@ -161,13 +161,13 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
        <body>
 <div class="container">
 
-    <h1>☁️ Cloud Health Monitor</h1>
+    <h1>Cloud Health Monitor</h1>
 
     <p class="subtitle">Real-time cloud service health monitoring</p>
 
     <p class="last-check">Last checked: %s</p>
 
-    <button onclick="location.reload()">↻ Refresh Now</button>
+    <button onclick="location.reload()">Refresh Now</button>
 
     <div class="overview">
         <div class="stat">
@@ -185,7 +185,7 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
             <div class="stat-value">%s</div>
         </div>
     </div>
-       """ % (total_services, healthy_services, down_services, datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+     """ % (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), total_services, healthy_services, down_services)
 
         for name, status, response_time in results:
 
