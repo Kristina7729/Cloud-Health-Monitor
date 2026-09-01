@@ -39,16 +39,22 @@ Cloud Health Monitor checks whether selected services are reachable and reports:
 3. It determines whether the service is healthy or unavailable.
 4. Results are displayed through a web dashboard.
 5. The dashboard can be refreshed to perform another health check.
+   
+### 📊 Example Results
 
-6. ## 📊 Example Results
+- Google — HEALTHY
+- GitHub — HEALTHY
+- Amazon — HEALTHY (HTTP 202)
 
-Google — HEALTHY  
-GitHub — HEALTHY  
-Amazon — DOWN  
+Each health check displays the service status and response time.
 
-Each check also displays the response time for the monitored service.
+### 🛠️ Troubleshooting & Improvements
 
-## 📂 Project Structure
+During initial testing, Amazon was incorrectly reported as `DOWN` because the health-check logic only treated HTTP `200` responses as healthy. The health-check logic was updated to recognize successful HTTP responses in the `2xx–3xx` range.
+
+After the update, Amazon returned **HTTP 202 (Accepted)** and was correctly identified as **HEALTHY**.
+
+### 📁 Project Structure
 
 ```text
 Cloud-Health-Monitor/
