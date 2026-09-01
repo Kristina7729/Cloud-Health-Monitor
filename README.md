@@ -57,7 +57,8 @@ Cloud-Health-Monitor/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-└── .env ```.
+└── .env
+ ```
 
 ## 📊 Dashboard Preview
 
