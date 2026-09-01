@@ -182,10 +182,10 @@ class HealthMonitorHandler(BaseHTTPRequestHandler):
 
         <div class="stat">
             <div class="stat-label">Down</div>
-            <div class="stat-value">%d</div>
+            <div class="stat-value">%s</div>
         </div>
     </div>
-       """ % (total_services, healthy_services, down_services, datetime.now().strftime("%Y-%m-%s %H:%M:%S"))
+       """ % (total_services, healthy_services, down_services, datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
         for name, status, response_time in results:
 
