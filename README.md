@@ -50,7 +50,7 @@ Each health check displays the service status and response time.
 
 ### 🛠️ Troubleshooting & Improvements
 
-During initial testing, Amazon was incorrectly reported as `DOWN` because the health-check logic only treated HTTP `200` responses as healthy. The health-check logic was updated to recognize successful HTTP responses in the `2xx–3xx` range.
+During initial testing, Amazon was incorrectly reported as DOWN because the health-check logic only treated HTTP 200 responses as healthy. The health-check logic was updated to recognize successful HTTP responses in the 2xx–3xx range.
 
 After the update, Amazon returned **HTTP 202 (Accepted)** and was correctly identified as **HEALTHY**.
 
