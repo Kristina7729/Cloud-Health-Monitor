@@ -63,6 +63,6 @@ Cloud-Health-Monitor/
 
 The dashboard provides a real-time overview of service health, response times, and availability across monitored cloud services.
 
-![Cloud Health Monitor Dashboard - Part 1](Dashboard.png.png)
+<img src="./Dashboard.png.png" alt="Cloud Health Monitor Dashboard - Part 1">
 
-![Cloud Health Monitor Dashboard - Part 2](Dashboard1.png.png)
+<img src="./Dashboard1.png.png" alt="Cloud Health Monitor Dashboard - Part 2"> 
