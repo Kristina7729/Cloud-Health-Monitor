@@ -55,6 +55,7 @@ Cloud-Health-Monitor/
 │
 ├── app.py
 ├── requirements.txt
+├── DockerFile
 ├── README.md
 ├── .gitignore
 └── .env
